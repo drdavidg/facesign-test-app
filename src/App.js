@@ -1,23 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import FaceSignInterface from './FaceSignInterface';
 
 function App() {
+  // Replace with the URL you received from the API
+  const facesignUrl = 'https://identity.facefile.co?cs=cse45429da30be47ce87ce1933fa435a2d';
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <FaceSignInterface url={facesignUrl} />
     </div>
   );
 }
